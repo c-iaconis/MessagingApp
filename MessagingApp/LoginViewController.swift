@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import Firebase
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
+    @IBAction func loginButtonPressed(_ sender: Any) {
+        let messageList = self.storyboard?.instantiateViewController(withIdentifier: "MessageList")
+        self.present(messageList!, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
